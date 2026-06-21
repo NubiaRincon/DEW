@@ -1,0 +1,45 @@
+function formatarValor(valor) {
+    if (Number.isInteger(valor)) {
+        return valor.toString();
+    }
+
+    return valor.toFixed(2);
+}
+
+function calcularGastos(gastos) {
+    let total = 0;
+
+    for (let i = 0; i < gastos.length; i++) {
+        let valorConvertido = Number(gastos[i]);
+
+        if (gastos[i] === "" || Number.isNaN(valorConvertido)) {
+            continue;
+        }
+
+        total += valorConvertido;
+    }
+
+    let mensagem = "";
+
+    mensagem += `Total: R$ ${formatarValor(total)}\n\n`;
+
+    if (total > 2000) {
+        mensagem += "Limite ultrapassado";
+    } else {
+        mensagem += "Gastos dentro do limite";
+    }
+
+    confirm(mensagem);
+}
+
+//Exemplo1
+let gastos1 = ["500", "350.50", "1000"];
+calcularGastos(gastos1);
+
+//Exemplo2
+let gastos2 = ["800", "900", "700"];
+calcularGastos(gastos2);
+
+//Exemplo valor invalido
+let gastos3 = ["500", "abc", "300", ""];
+calcularGastos(gastos3);

@@ -1,1 +1,1 @@
-# DEW
+# Este repositório contém meu trabalho da disciplina Desenvolvimento Web (DEW), realizado no semestre 2026-1 na Univille. O objetivo é aplicar os conceitos aprendidos em aula, desenvolvendo páginas e funcionalidades que demonstrem boas práticas de programação e organização de código.
